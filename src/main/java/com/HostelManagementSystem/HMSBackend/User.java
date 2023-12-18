@@ -16,12 +16,15 @@ public class User {
 
     private Long id;
     private String username;
+    private String fullname;
     private String email;
+    private String usertype;
     private String phone;
     private String password;
-
+    
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
+
 
     public Long getId() {
         return id;
@@ -37,6 +40,14 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getEmail() {
@@ -55,6 +66,13 @@ public class User {
         this.phone = phone;
     }
 
+    public String getUsertype() {
+        return usertype;
+    }
+
+    public void setUsertype(String usertype) {
+        this.usertype = usertype;
+    }
     public String getPassword() {
         return password;
     }
