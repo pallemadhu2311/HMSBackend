@@ -21,7 +21,7 @@ public class User {
     private String usertype;
     private String phone;
     private String password;
-    
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
 
