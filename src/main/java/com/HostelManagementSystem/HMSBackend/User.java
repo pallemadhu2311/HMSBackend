@@ -15,13 +15,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
+
+    @Column(unique = true)
     private String username;
     private String fullname;
     private String email;
     private String usertype;
     private String phone;
     private String password;
-    
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
 
