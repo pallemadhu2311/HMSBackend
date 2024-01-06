@@ -20,10 +20,27 @@ public class UserController {
     }
 
     //getting all the signup data
+    // http://localhost:8080/api/users
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+
+
+    // http://localhost:8080/api/users/profile?username=test
+    @GetMapping("/profile")
+    public ResponseEntity<User> getUserProfile(@RequestParam String username){
+        User user = userService.findByUsername(username);
+
+        if(user != null){
+            return ResponseEntity.ok(user);
+        }
+        else{
+            return ResponseEntity.notFound().build();
+        }
+
+    }
+
 
 
 

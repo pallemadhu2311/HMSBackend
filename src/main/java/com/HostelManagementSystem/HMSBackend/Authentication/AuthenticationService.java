@@ -1,7 +1,7 @@
 package com.HostelManagementSystem.HMSBackend.Authentication;
 
-import com.HostelManagementSystem.HMSBackend.Authentication.ApplicationUser;
-import com.HostelManagementSystem.HMSBackend.Authentication.ApplicationUserRepository;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
