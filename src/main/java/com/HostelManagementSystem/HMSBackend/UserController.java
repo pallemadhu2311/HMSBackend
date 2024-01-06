@@ -26,6 +26,7 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+
     // http://localhost:8080/api/users/profile?username=test
     @GetMapping("/profile")
     public ResponseEntity<User> getUserProfile(@RequestParam String username){
@@ -39,6 +40,7 @@ public class UserController {
         }
 
     }
+
 
 
 
