@@ -4,6 +4,8 @@ package com.HostelManagementSystem.HMSBackend.Hostels;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 // Declaring the class as a service component in the Spring context
 @Service
 public class HostelService {
@@ -13,6 +15,8 @@ public class HostelService {
     private HostelRepository hostelRepository;
     public Hostel saveHostel(Hostel hostel){
         // Calling the save method of HostelRepository to persist the Hostel entity
+        hostel.setCreatedat(new Date());
+        hostel.setUpdatedat(new Date());
         return hostelRepository.save(hostel);
     }
 }

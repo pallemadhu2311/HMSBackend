@@ -10,6 +10,7 @@ public class Hostel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
+
     private String hostelname;
     private String ownername;
     private String hosteltype;
@@ -26,7 +27,7 @@ public class Hostel {
     private Boolean alphabets;
     private Boolean numbers;
     private Boolean combinationtype;
-    private String hostelphotos;
+    private Double flatadvanceamount;
     private String flat;
     private String street;
     private String city;
@@ -45,6 +46,46 @@ public class Hostel {
     private Date createdat;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedat;
+
+    private String username;
+
+    public Hostel(Long id, String hostelname, String ownername, String hosteltype, String phoneno, String email, String feetype, Double oneshare, Double twoshare, Double threeshare, Double fourshare, Double fiveshare, Double advanceamount, Double monthlyflatprice, Boolean alphabets, Boolean numbers, Boolean combinationtype, Double flatadvanceamount, String flat, String street, String city, String district, String state, Integer pincode, Boolean ac, Boolean nonac, Boolean washingmachine, Boolean geyser, Boolean gym, Boolean parking, Boolean hostelbus, String instructions, Date createdat, Date updatedat, String username) {
+        this.id = id;
+        this.hostelname = hostelname;
+        this.ownername = ownername;
+        this.hosteltype = hosteltype;
+        this.phoneno = phoneno;
+        this.email = email;
+        this.feetype = feetype;
+        this.oneshare = oneshare;
+        this.twoshare = twoshare;
+        this.threeshare = threeshare;
+        this.fourshare = fourshare;
+        this.fiveshare = fiveshare;
+        this.advanceamount = advanceamount;
+        this.monthlyflatprice = monthlyflatprice;
+        this.alphabets = alphabets;
+        this.numbers = numbers;
+        this.combinationtype = combinationtype;
+        this.flatadvanceamount = flatadvanceamount;
+        this.flat = flat;
+        this.street = street;
+        this.city = city;
+        this.district = district;
+        this.state = state;
+        this.pincode = pincode;
+        this.ac = ac;
+        this.nonac = nonac;
+        this.washingmachine = washingmachine;
+        this.geyser = geyser;
+        this.gym = gym;
+        this.parking = parking;
+        this.hostelbus = hostelbus;
+        this.instructions = instructions;
+        this.createdat = createdat;
+        this.updatedat = updatedat;
+        this.username = username;
+    }
 
     public Long getId() {
         return id;
@@ -182,12 +223,12 @@ public class Hostel {
         this.combinationtype = combinationtype;
     }
 
-    public String getHostelphotos() {
-        return hostelphotos;
+    public Double getFlatadvanceamount() {
+        return flatadvanceamount;
     }
 
-    public void setHostelphotos(String hostelphotos) {
-        this.hostelphotos = hostelphotos;
+    public void setFlatadvanceamount(Double flatadvanceamount) {
+        this.flatadvanceamount = flatadvanceamount;
     }
 
     public String getFlat() {
@@ -298,7 +339,7 @@ public class Hostel {
         return instructions;
     }
 
-    public void setInstructions(String instructions) {
+    public void setInstructions(String Instructions) {
         this.instructions = instructions;
     }
 
@@ -316,5 +357,13 @@ public class Hostel {
 
     public void setUpdatedat(Date updatedat) {
         this.updatedat = updatedat;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
