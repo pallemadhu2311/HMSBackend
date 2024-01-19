@@ -1,3 +1,4 @@
+
     package com.HostelManagementSystem.HMSBackend.Hostels;
 
     // Importing necessary Spring Framework annotations and classes
@@ -34,4 +35,5 @@
             return hostelService.getAllHostels();
         }
     }
+
 
