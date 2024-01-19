@@ -49,7 +49,16 @@ public class Hostel {
 
     private String username;
 
-    public Hostel(Long id, String hostelname, String ownername, String hosteltype, String phoneno, String email, String feetype, Double oneshare, Double twoshare, Double threeshare, Double fourshare, Double fiveshare, Double advanceamount, Double monthlyflatprice, Boolean alphabets, Boolean numbers, Boolean combinationtype, Double flatadvanceamount, String flat, String street, String city, String district, String state, Integer pincode, Boolean ac, Boolean nonac, Boolean washingmachine, Boolean geyser, Boolean gym, Boolean parking, Boolean hostelbus, String instructions, Date createdat, Date updatedat, String username) {
+
+    @Lob
+    @Column(name = "hostel_photos", columnDefinition = "LONGBLOB")
+    private byte[] photos;
+
+    public Hostel() {
+        // Empty constructor required by JPA
+    }
+    public Hostel(Long id, String hostelname, String ownername, String hosteltype, String phoneno, String email, String feetype, Double oneshare, Double twoshare, Double threeshare, Double fourshare, Double fiveshare, Double advanceamount, Double monthlyflatprice, Boolean alphabets, Boolean numbers, Boolean combinationtype, Double flatadvanceamount, String flat, String street, String city, String district, String state, Integer pincode, Boolean ac, Boolean nonac, Boolean washingmachine, Boolean geyser, Boolean gym, Boolean parking, Boolean hostelbus, String instructions, Date createdat, Date updatedat, String username ) {
+
         this.id = id;
         this.hostelname = hostelname;
         this.ownername = ownername;
@@ -85,6 +94,7 @@ public class Hostel {
         this.createdat = createdat;
         this.updatedat = updatedat;
         this.username = username;
+
     }
 
     public Long getId() {
@@ -366,4 +376,5 @@ public class Hostel {
     public void setUsername(String username) {
         this.username = username;
     }
+
 }
