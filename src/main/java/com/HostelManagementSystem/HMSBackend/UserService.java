@@ -12,12 +12,10 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;
 
-
     //used it for register the user
     public User registerUser(User user){
         return  userRepo.save(user);
     }
-
 
 
     // get all the registered username [used in signup users data]

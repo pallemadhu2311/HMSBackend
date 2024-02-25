@@ -3,12 +3,10 @@ package com.HostelManagementSystem.HMSBackend.Hostels;
 // Importing necessary Spring Framework annotations and classes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Date;
 import java.util.List;
-
 
 // Declaring the class as a service component in the Spring context
 @Service
@@ -24,10 +22,13 @@ public class HostelService {
         return hostelRepository.save(hostel);
     }
 
-
     public List<Hostel> getAllHostels() {
         return hostelRepository.findAll();
     }
 
-=
+    public List<Hostel> getHostelsByUsername(String username){
+        return hostelRepository.findHostelsByUsername(username);
+    }
+
+
 }
