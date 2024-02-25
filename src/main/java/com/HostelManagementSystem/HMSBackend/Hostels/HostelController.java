@@ -1,4 +1,3 @@
-
     package com.HostelManagementSystem.HMSBackend.Hostels;
 
     // Importing necessary Spring Framework annotations and classes
@@ -34,6 +33,19 @@
         public List<Hostel> getAllHostels() {
             return hostelService.getAllHostels();
         }
-    }
 
+//        @GetMapping("/hostelsdata")
+//        public ResponseEntity<List<Hostel>> getHostelsByUsername(@PathVariable String username){
+//            List<Hostel> hostels = hostelService.getHostelsByUsername(username);
+//            return  new ResponseEntity<>(hostels, HttpStatus.OK);
+//        }
+
+        @GetMapping("/hostelsdata")
+        public ResponseEntity<List<Hostel>> getHostelsByUsername(@RequestParam("username") String username){
+            List<Hostel> hostels = hostelService.getHostelsByUsername(username);
+            return new ResponseEntity<>(hostels, HttpStatus.OK);
+        }
+
+
+    }
 
