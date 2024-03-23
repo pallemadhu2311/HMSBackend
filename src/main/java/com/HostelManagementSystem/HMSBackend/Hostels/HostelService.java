@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 // Declaring the class as a service component in the Spring context
 @Service
@@ -29,6 +30,9 @@ public class HostelService {
     public List<Hostel> getHostelsByUsername(String username){
         return hostelRepository.findHostelsByUsername(username);
     }
+
+
+
 
 
 }

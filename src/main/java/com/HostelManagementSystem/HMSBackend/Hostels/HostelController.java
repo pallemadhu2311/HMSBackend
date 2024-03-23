@@ -7,6 +7,7 @@
     import org.springframework.web.bind.annotation.*;
 
     import java.util.List;
+    import java.util.Optional;
 
     // Declaring the class as a REST controller with a base mapping
     @RestController
@@ -34,17 +35,13 @@
             return hostelService.getAllHostels();
         }
 
-//        @GetMapping("/hostelsdata")
-//        public ResponseEntity<List<Hostel>> getHostelsByUsername(@PathVariable String username){
-//            List<Hostel> hostels = hostelService.getHostelsByUsername(username);
-//            return  new ResponseEntity<>(hostels, HttpStatus.OK);
-//        }
 
         @GetMapping("/hostelsdata")
         public ResponseEntity<List<Hostel>> getHostelsByUsername(@RequestParam("username") String username){
             List<Hostel> hostels = hostelService.getHostelsByUsername(username);
             return new ResponseEntity<>(hostels, HttpStatus.OK);
         }
+
 
 
     }
